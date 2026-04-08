@@ -5,7 +5,7 @@ class WährungsumrechnerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Währungsumrechner")
-        self.root.geometry("600x400")
+        self.root.geometry("600x500")
         self.root.configure(bg="#f0f0f0")
         
         # Wechselkurse (relativ zu Euro)
@@ -13,7 +13,8 @@ class WährungsumrechnerApp:
             "EURO": 1.0,
             "YEN": 182.0,
             "SCHWEDISCHE KRONEN": 10.63,
-            "SCHILLING": 13.76 
+            "SCHILLING": 13.76,
+            "Schweizer Franken": 0.92
         }
         
         # Haupttitel
@@ -70,7 +71,7 @@ class WährungsumrechnerApp:
                                       bg="#f0f0f0", padx=15, pady=15)
         ergebnis_frame.pack(pady=15, padx=20, fill="both", expand=True)
         
-        self.ergebnis_label = tk.Label(ergebnis_frame, text="Geben Sie einen Betrag ein und klicken Sie auf 'Umrechnen'",
+        self.ergebnis_label = tk.Label(ergebnis_frame, text="Gib an Betrag ein",
                                        font=("Arial", 14), bg="white", fg="#333333", 
                                        justify="center", wraplength=400, relief="sunken", padx=10, pady=20)
         self.ergebnis_label.pack(fill="both", expand=True)
